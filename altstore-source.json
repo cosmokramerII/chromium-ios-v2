@@ -1,33 +1,40 @@
 {
-    "name": "Chromium for iOS",
-    "identifier": "com.joediragi.chromios",
-    "sourceURL": "https://raw.githubusercontent.com/TheNightmanCodeth/chromium-ios/master/altstore-source.json",
+    "name": "Chromium for iOS v2",
+    "identifier": "com.joediragi.chromios.v2",
+    "sourceURL": "https://raw.githubusercontent.com/cosmokramerII/chromium-ios-v2/master/altstore-source.json",
     "apps": [
         {
-            "name": "Chromium",
+            "name": "Chromium v2",
             "bundleIdentifier": "org.chromium.chrome.ios.dev",
-            "developerName": "Google",
-            "subtitle": "Compiled with love, by hand <3",
-            "version": "91.0.4458.0",
-            "versionDate": "2021-03-25",
-            "versionDescription": "First 'release' for iOS",
-            "downloadURL": "https://github.com/TheNightmanCodeth/chromium-ios/releases/download/1.0.0/chromium.ipa",
-            "localizedDescription": "Open source version of Google's Chrome browser for iOS",
-            "iconURL": "https://github.com/TheNightmanCodeth/chromium-ios/raw/master/Icon.png",
-            "size": 106722609,
+            "developerName": "Chromium Team",
+            "subtitle": "iOS 26 Compatible - Address Bar Crash Fixed",
+            "version": "92.0.4472.0",
+            "versionDate": "2024-09-28",
+            "versionDescription": "Fixed address bar crashing issue and added iOS 26 compatibility. This version uses actual Chromium engine (not WebKit) with enhanced crash prevention and memory management.",
+            "downloadURL": "https://github.com/cosmokramerII/chromium-ios-v2/releases/download/v2.0.0/chromium-ios-v2.ipa",
+            "localizedDescription": "Native Chromium browser for iOS with crash-resistant address bar and iOS 26 compatibility. Features include:\n\n• Fixed address bar crashes with comprehensive error handling\n• True Chromium engine implementation (not WebKit-based)\n• iOS 26 compatibility with enhanced UI support\n• Advanced memory management and crash prevention\n• Enhanced security with URL validation\n• Improved accessibility features\n• Optimized performance for modern iOS devices",
+            "iconURL": "https://github.com/cosmokramerII/chromium-ios-v2/raw/master/Icon.png",
+            "size": 125000000,
             "screenshotURLs": [
                 "https://i.imgur.com/dolzx60.png",
                 "https://i.imgur.com/XpJNa6V.png"
             ],
-            "beta": false
+            "beta": false,
+            "minOSVersion": "17.0"
         }
     ],
     "news": [
         {
-            "title": "Chromium for iOS now available through AltStore!",
+            "title": "Chromium iOS v2 - Address Bar Fix & iOS 26 Support!",
+            "identifier": "chromium-v2-address-bar-fix",
+            "caption": "Fixed crashes and enhanced compatibility",
+            "date": "2024-09-28"
+        },
+        {
+            "title": "Previous: Chromium for iOS now available through AltStore!",
             "identifier": "chromium-available-download",
             "caption": "Compiled by hand <3",
-            "date": "2020-03-25"
+            "date": "2021-03-25"
         }
     ]
 }
