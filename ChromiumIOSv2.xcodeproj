@@ -34,6 +34,7 @@
 		1A2B3C4D5E6F789012345691 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A2B3C4D5E6F789012345693 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		1A2B3C4D5E6F789012345695 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A2B3C4D5E6F789012345701 /* ChromiumConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChromiumConfig.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +77,7 @@
 				1A2B3C4D5E6F789012345685 /* BrowserViewController.m */,
 				1A2B3C4D5E6F789012345686 /* AddressBarController.h */,
 				1A2B3C4D5E6F789012345687 /* AddressBarController.m */,
+				1A2B3C4D5E6F789012345701 /* ChromiumConfig.h */,
 				1A2B3C4D5E6F789012345693 /* Main.storyboard */,
 				1A2B3C4D5E6F789012345691 /* LaunchScreen.storyboard */,
 				1A2B3C4D5E6F789012345695 /* Info.plist */,
