@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Build script for Chromium iOS v2
+# Build script for ChromiumIOSv2 (WebKit-based browser for iOS)
 # Requires Xcode 15.0+ and iOS 14+ SDK
 
 set -e
@@ -13,7 +13,7 @@ BUILD_DIR="build"
 ARCHIVE_PATH="$BUILD_DIR/$PROJECT_NAME.xcarchive"
 IPA_PATH="$BUILD_DIR/$PROJECT_NAME.ipa"
 
-echo "🚀 Building Chromium iOS v2..."
+echo "🚀 Building ChromiumIOSv2 (WebKit-based browser)..."
 
 # Check if xcodebuild is available
 if ! command -v xcodebuild &> /dev/null; then

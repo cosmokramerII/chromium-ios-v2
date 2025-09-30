@@ -115,7 +115,8 @@ This document details the comprehensive crash fixes implemented in the AddressBa
 
 ## Modern iOS Specific Considerations
 
-### 1. Modern WebKit APIs
+### 1. WebKit APIs (Apple's Required Engine)
+- iOS browsers must use WebKit (WKWebView) per Apple's App Store guidelines
 - Updated WebKit configuration for iOS 14+ compatibility
 - Proper handling of modern security restrictions
 - Enhanced media playback policies
@@ -198,4 +199,4 @@ This document details the comprehensive crash fixes implemented in the AddressBa
 
 ## Conclusion
 
-The implemented crash fixes provide a robust foundation for the Chromium iOS v2 browser, ensuring stable operation across all iOS 14+ devices. The comprehensive approach addresses memory management, thread safety, input validation, and integration concerns while maintaining optimal performance.
+The implemented crash fixes provide a robust foundation for the ChromiumIOSv2 browser, ensuring stable operation across all iOS 14+ devices. The browser uses Apple's WebKit engine (required for iOS) with Chrome-compatible configuration for optimal site compatibility. The comprehensive approach addresses memory management, thread safety, input validation, and integration concerns while maintaining optimal performance.

@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  ChromiumIOSv2
 //
-//  iOS 14+ compatible Chromium-based browser
+//  iOS 14+ compatible WebKit-based browser (Apple's required engine)
 //
 
 #import "AppDelegate.h"
@@ -15,7 +15,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // iOS 14+ compatibility initialization
-    // Initialize Chromium engine components here
+    // Initialize WebKit components (Apple's required browser engine for iOS)
     
     return YES;
 }

@@ -1,6 +1,8 @@
 # Chromium iOS v2
 
-A Chromium-based web browser for iOS with iOS 14+ compatibility and robust address bar functionality.
+A WebKit-based web browser for iOS with iOS 14+ compatibility and robust address bar functionality.
+
+**Note**: Due to Apple's App Store requirements, all iOS browsers must use WebKit (WKWebView) as their rendering engine. While this browser is styled after Chromium and uses a Chrome-compatible user agent string for site compatibility, it uses Apple's WebKit engine, not Blink.
 
 ## 🎉 Project Status: Ready to Build!
 
@@ -19,7 +21,8 @@ All errors have been fixed! The project is now ready to build and create IPA fil
 
 - **iOS 14+ Compatible**: Updated deployment target and API usage for iOS 14 and later
 - **Crash-Free Address Bar**: Comprehensive crash prevention and memory management
-- **Chromium-Based Engine**: Uses WKWebView configured for Chromium-like behavior
+- **WebKit-Based Engine**: Uses Apple's WKWebView (required for all iOS browsers)
+- **Chrome-Compatible User Agent**: Configured for optimal site compatibility
 - **Robust URL Handling**: Smart URL validation and search query detection
 - **Thread-Safe Operations**: All UI updates are performed on the main thread
 - **Modern iOS Design**: Uses Auto Layout and supports both iPhone and iPad
@@ -35,7 +38,7 @@ All errors have been fixed! The project is now ready to build and create IPA fil
    - Smart URL validation and search query detection
 
 2. **BrowserViewController**: Main browser interface with WebView integration
-   - WKWebView configured for Chromium-like behavior
+   - WKWebView (Apple's WebKit engine, required for iOS)
    - Progress tracking and loading state management
    - Proper delegate cleanup to prevent crashes
 
@@ -123,11 +126,13 @@ Simply tap the address bar, enter a URL or search term, and press Go or Return t
 ## Technical Notes
 
 ### WebView Configuration
-The browser uses WKWebView configured with Chromium-like settings:
-- Custom user agent string identifying as Chromium-based
+The browser uses Apple's WKWebView (WebKit engine) configured with optimal settings:
+- Custom user agent string for Chrome compatibility with websites
 - JavaScript enabled
 - Media playback without user interaction
 - Proper process pool configuration
+
+**Important**: iOS browsers are required by Apple to use WebKit. This browser cannot use Blink (Chrome's engine) as it is not available on iOS.
 
 ### Address Bar Features
 - Automatic HTTPS prefix addition
@@ -151,6 +156,7 @@ When contributing to this project, please ensure:
 
 ## Documentation
 
+- **[ENGINE_INFO.md](ENGINE_INFO.md)** - Detailed explanation of WebKit vs Blink
 - **[QUICKSTART.md](QUICKSTART.md)** - Fast guide to build and install
 - **[BUILD_IPA.md](BUILD_IPA.md)** - Comprehensive build instructions
 - **[FIXES_APPLIED.md](FIXES_APPLIED.md)** - List of fixes and improvements
@@ -158,4 +164,4 @@ When contributing to this project, please ensure:
 
 ## License
 
-This project is based on the Chromium project and follows the same licensing terms.
+This project is inspired by the Chromium project's UI design. The browser uses Apple's WebKit engine as required by iOS App Store guidelines.
