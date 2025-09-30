@@ -1,10 +1,10 @@
 # Chromium iOS v2
 
-A Chromium-based web browser for iOS with iOS 26 compatibility and robust address bar functionality.
+A Chromium-based web browser for iOS with iOS 14+ compatibility and robust address bar functionality.
 
 ## Features
 
-- **iOS 26 Compatible**: Updated deployment target and API usage for iOS 26
+- **iOS 14+ Compatible**: Updated deployment target and API usage for iOS 14 and later
 - **Crash-Free Address Bar**: Comprehensive crash prevention and memory management
 - **Chromium-Based Engine**: Uses WKWebView configured for Chromium-like behavior
 - **Robust URL Handling**: Smart URL validation and search query detection
@@ -50,11 +50,11 @@ A Chromium-based web browser for iOS with iOS 26 compatibility and robust addres
 - Network error presentation with user-friendly messages
 - Graceful degradation when components fail to initialize
 
-## iOS 26 Compatibility
+## iOS 14+ Compatibility
 
-- **Deployment Target**: Set to iOS 26.0
+- **Deployment Target**: Set to iOS 14.0
 - **Modern API Usage**: Updated to use latest iOS APIs where available
-- **WebKit Configuration**: Configured for iOS 26 WebKit features
+- **WebKit Configuration**: Configured for modern iOS WebKit features
 - **Scene Support**: Full support for iOS 13+ scene-based lifecycle
 
 ## Testing
@@ -70,13 +70,13 @@ The project includes comprehensive unit tests for the address bar functionality:
 ## Build Requirements
 
 - Xcode 15.0 or later
-- iOS 26.0 SDK
-- Deployment target: iOS 26.0
+- iOS 14.0 SDK or later
+- Deployment target: iOS 14.0
 
 ## Installation
 
 1. Open `ChromiumIOSv2.xcodeproj` in Xcode
-2. Select your target device or simulator (iOS 26+)
+2. Select your target device or simulator (iOS 14+)
 3. Build and run the project
 
 ## Usage

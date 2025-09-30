@@ -2,7 +2,7 @@
 //  main.m
 //  ChromiumIOSv2
 //
-//  Created by Chromium iOS v2 on iOS 26 compatible build.
+//  Created by Chromium iOS v2 on iOS 14+ compatible build.
 //
 
 #import <UIKit/UIKit.h>
@@ -11,7 +11,7 @@
 int main(int argc, char * argv[]) {
     NSString * appDelegateClassName;
     @autoreleasepool {
-        // Setup for iOS 26 compatibility
+        // Setup for iOS 14+ compatibility
         appDelegateClassName = NSStringFromClass([AppDelegate class]);
     }
     return UIApplicationMain(argc, argv, nil, appDelegateClassName);

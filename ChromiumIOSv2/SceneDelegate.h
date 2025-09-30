@@ -2,7 +2,7 @@
 //  SceneDelegate.h
 //  ChromiumIOSv2
 //
-//  iOS 26 compatible Scene management
+//  iOS 14+ compatible Scene management
 //
 
 #import <UIKit/UIKit.h>

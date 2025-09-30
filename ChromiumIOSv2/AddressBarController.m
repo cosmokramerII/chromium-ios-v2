@@ -2,7 +2,7 @@
 //  AddressBarController.m
 //  ChromiumIOSv2
 //
-//  Address bar controller with crash fixes and iOS 26 compatibility
+//  Address bar controller with crash fixes and iOS 14+ compatibility
 //
 
 #import "AddressBarController.h"

@@ -2,7 +2,7 @@
 //  AppDelegate.h
 //  ChromiumIOSv2
 //
-//  iOS 26 compatible Chromium-based browser
+//  iOS 14+ compatible Chromium-based browser
 //
 
 #import <UIKit/UIKit.h>

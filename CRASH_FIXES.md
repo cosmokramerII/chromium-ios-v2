@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document details the comprehensive crash fixes implemented in the AddressBarController and related components to ensure stable operation on iOS 26.
+This document details the comprehensive crash fixes implemented in the AddressBarController and related components to ensure stable operation on iOS 14 and later versions.
 
 ## Identified Crash Scenarios and Fixes
 
@@ -113,11 +113,11 @@ This document details the comprehensive crash fixes implemented in the AddressBa
 }
 ```
 
-## iOS 26 Specific Considerations
+## Modern iOS Specific Considerations
 
 ### 1. Modern WebKit APIs
-- Updated WebKit configuration for iOS 26 compatibility
-- Proper handling of new security restrictions
+- Updated WebKit configuration for iOS 14+ compatibility
+- Proper handling of modern security restrictions
 - Enhanced media playback policies
 
 ### 2. Scene Lifecycle
@@ -126,7 +126,7 @@ This document details the comprehensive crash fixes implemented in the AddressBa
 - Memory management across scene transitions
 
 ### 3. Enhanced Privacy Features
-- Compliance with iOS 26 privacy requirements
+- Compliance with modern iOS privacy requirements
 - Proper handling of app tracking transparency
 - Secure URL processing
 
@@ -198,4 +198,4 @@ This document details the comprehensive crash fixes implemented in the AddressBa
 
 ## Conclusion
 
-The implemented crash fixes provide a robust foundation for the Chromium iOS v2 browser, ensuring stable operation across all iOS 26 devices. The comprehensive approach addresses memory management, thread safety, input validation, and integration concerns while maintaining optimal performance.
+The implemented crash fixes provide a robust foundation for the Chromium iOS v2 browser, ensuring stable operation across all iOS 14+ devices. The comprehensive approach addresses memory management, thread safety, input validation, and integration concerns while maintaining optimal performance.
