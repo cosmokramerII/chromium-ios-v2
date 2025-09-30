@@ -1,0 +1,58 @@
+# GN build arguments for Chromium iOS with Blink
+# This configures the build to use Blink rendering engine instead of WebKit
+
+# Target platform
+target_os = "ios"
+target_cpu = "arm64"
+
+# Enable Blink rendering engine
+use_blink = true
+enable_webkit = false
+
+# iOS specific settings
+ios_deployment_target = "13.0"
+ios_enable_code_signing = false
+
+# Blink configuration
+enable_blink_heap_verification = false
+enable_blink_heap_incremental_marking = true
+
+# Disable features not needed for iOS
+enable_nacl = false
+enable_remoting = false
+enable_web_speech = false
+
+# Enable required features
+enable_basic_printing = false
+enable_print_preview = false
+
+# Graphics configuration
+use_metal = true
+enable_vulkan = false
+
+# Network configuration
+use_platform_icu_alternatives = true
+
+# Build optimization
+is_component_build = false
+is_debug = false
+is_official_build = false
+symbol_level = 1
+
+# Chrome branding
+is_chrome_branded = true
+ffmpeg_branding = "Chrome"
+proprietary_codecs = true
+
+# Disable desktop features
+enable_extensions = false
+enable_plugins = false
+enable_pdf = false
+
+# Threading
+use_partition_alloc = true
+use_allocator_shim = false
+
+# JIT support for Blink
+v8_enable_jitless = false
+v8_enable_lite_mode = false
