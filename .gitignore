@@ -98,3 +98,19 @@ iOSInjectionProject/
 *.swp
 *.swo
 *~
+
+# Chromium/GN build artifacts
+out/
+.gclient
+.gclient_entries
+*.ninja
+*.ninja_deps
+*.ninja_log
+.gn_args
+
+# Chromium source (if cloned)
+chromium/
+src/
+
+# Build outputs
+chromium-blink.ipa

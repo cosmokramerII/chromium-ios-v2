@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- JIT Compilation Support -->
+	<!-- Required for V8 JavaScript engine in Blink -->
+	<key>com.apple.security.cs.allow-jit</key>
+	<true/>
+	
+	<!-- Unsigned Executable Memory -->
+	<!-- Required for dynamic code generation in Blink/V8 -->
+	<key>com.apple.security.cs.allow-unsigned-executable-memory</key>
+	<true/>
+	
+	<!-- Metal GPU Access -->
+	<!-- Required for Metal compositor -->
+	<key>com.apple.developer.metal</key>
+	<true/>
+	
+	<!-- Network Access -->
+	<!-- Required for loading web content -->
+	<key>com.apple.security.network.client</key>
+	<true/>
+	
+	<!-- Outgoing Network Connections -->
+	<key>com.apple.security.network.server</key>
+	<true/>
+	
+	<!-- Get Task Allow -->
+	<!-- For development and debugging -->
+	<key>com.apple.security.get-task-allow</key>
+	<true/>
+</dict>
+</plist>

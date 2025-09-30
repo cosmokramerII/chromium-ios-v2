@@ -1,0 +1,20 @@
+# The location of the build configuration file.
+buildconfig = "//build/config/BUILDCONFIG.gn"
+
+# The secondary source root is a parallel directory tree where
+# GN build files are placed when they can not be placed directly
+# in the source tree, e.g. for third party source trees.
+secondary_source = "//build/secondary/"
+
+# The default configuration for targets in this build.
+default_args = {
+  # iOS specific configuration
+  target_os = "ios"
+  
+  # Use Blink instead of WebKit
+  use_blink = true
+  enable_webkit = false
+  
+  # Build for ARM64 devices
+  target_cpu = "arm64"
+}
