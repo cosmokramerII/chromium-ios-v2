@@ -1,0 +1,75 @@
+name: Build iOS IPA
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Xcode
+      uses: maxim-lobanov/setup-xcode@v1
+      with:
+        xcode-version: latest-stable
+
+    - name: Create build directory
+      run: mkdir -p build
+
+    - name: Build Xcode project
+      run: |
+        xcodebuild archive \
+          -project ChromiumIOSv2.xcodeproj \
+          -scheme ChromiumIOSv2 \
+          -configuration Release \
+          -archivePath build/ChromiumIOSv2.xcarchive \
+          -sdk iphoneos \
+          CODE_SIGNING_ALLOWED=NO \
+          CODE_SIGN_IDENTITY="" \
+          CODE_SIGNING_REQUIRED=NO
+
+    - name: Create ExportOptions.plist
+      run: |
+        cat > ExportOptions.plist << EOF
+        <?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+        <plist version="1.0">
+        <dict>
+            <key>method</key>
+            <string>development</string>
+            <key>signingStyle</key>
+            <string>automatic</string>
+            <key>stripSwiftSymbols</key>
+            <true/>
+        </dict>
+        </plist>
+        EOF
+
+    - name: Export IPA
+      run: |
+        xcodebuild -exportArchive \
+          -archivePath build/ChromiumIOSv2.xcarchive \
+          -exportPath build \
+          -exportOptionsPlist ExportOptions.plist
+
+    - name: Upload IPA as artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: ChromiumIOSv2-IPA
+        path: build/*.ipa
+        retention-days: 30
+
+    - name: List build output
+      if: always()
+      run: |
+        echo "Build directory contents:"
+        ls -la build/
