@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# Validation script for Chromium iOS v2
+# Validation script for ChromiumIOSv2 (WebKit-based browser)
 # This script checks if the project is properly configured
 
 set -e
 
-echo "🔍 Validating Chromium iOS v2 project..."
+echo "🔍 Validating ChromiumIOSv2 project..."
 echo ""
 
 # Color codes
