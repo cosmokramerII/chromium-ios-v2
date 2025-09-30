@@ -1,33 +1,30 @@
 {
     "name": "Chromium for iOS",
-    "identifier": "com.joediragi.chromios",
-    "sourceURL": "https://raw.githubusercontent.com/TheNightmanCodeth/chromium-ios/master/altstore-source.json",
+    "identifier": "com.cosmokramer.chromios",
+    "sourceURL": "https://raw.githubusercontent.com/cosmokramerII/chromium-ios-v2/master/altstore-source.json",
     "apps": [
         {
             "name": "Chromium",
             "bundleIdentifier": "org.chromium.chrome.ios.dev",
-            "developerName": "Google",
-            "subtitle": "Compiled with love, by hand <3",
-            "version": "91.0.4458.0",
-            "versionDate": "2021-03-25",
-            "versionDescription": "First 'release' for iOS",
-            "downloadURL": "https://github.com/TheNightmanCodeth/chromium-ios/releases/download/1.0.0/chromium.ipa",
-            "localizedDescription": "Open source version of Google's Chrome browser for iOS",
-            "iconURL": "https://github.com/TheNightmanCodeth/chromium-ios/raw/master/Icon.png",
-            "size": 106722609,
-            "screenshotURLs": [
-                "https://i.imgur.com/dolzx60.png",
-                "https://i.imgur.com/XpJNa6V.png"
-            ],
+            "developerName": "cosmokramerII",
+            "subtitle": "Open source iOS browser",
+            "version": "1.0.0",
+            "versionDate": "2025-01-27",
+            "versionDescription": "Initial release with basic browser functionality",
+            "downloadURL": "https://github.com/cosmokramerII/chromium-ios-v2/releases/download/v1.0.0/chromium.ipa",
+            "localizedDescription": "A minimal iOS browser application. This app provides basic web browsing functionality built with iOS native components.\n\nFeatures:\n- Clean and simple interface\n- iOS 13.0+ compatible\n- iPhone and iPad support\n- Native iOS WebKit integration",
+            "iconURL": "https://raw.githubusercontent.com/cosmokramerII/chromium-ios-v2/master/Icon.png",
+            "size": 5000000,
+            "screenshotURLs": [],
             "beta": false
         }
     ],
     "news": [
         {
-            "title": "Chromium for iOS now available through AltStore!",
-            "identifier": "chromium-available-download",
-            "caption": "Compiled by hand <3",
-            "date": "2020-03-25"
+            "title": "Chromium iOS v2 - Initial Release",
+            "identifier": "chromium-v2-initial",
+            "caption": "Basic browser functionality now available",
+            "date": "2025-01-27"
         }
     ]
 }
