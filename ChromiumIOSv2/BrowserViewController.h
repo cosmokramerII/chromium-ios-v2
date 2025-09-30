@@ -2,7 +2,7 @@
 //  BrowserViewController.h
 //  ChromiumIOSv2
 //
-//  Main browser view controller with Chromium integration and iOS 26 compatibility
+//  Main browser view controller with Chromium integration and iOS 14+ compatibility
 //
 
 #import <UIKit/UIKit.h>

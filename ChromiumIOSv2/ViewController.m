@@ -2,7 +2,7 @@
 //  ViewController.m
 //  ChromiumIOSv2
 //
-//  Main view controller for iOS 26 compatible Chromium browser
+//  Main view controller for iOS 14+ compatible Chromium browser
 //
 
 #import "ViewController.h"

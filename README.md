@@ -1,10 +1,23 @@
 # Chromium iOS v2
 
-A Chromium-based web browser for iOS with iOS 26 compatibility and robust address bar functionality.
+A Chromium-based web browser for iOS with iOS 14+ compatibility and robust address bar functionality.
+
+## 🎉 Project Status: Ready to Build!
+
+All errors have been fixed! The project is now ready to build and create IPA files. See **[QUICKSTART.md](QUICKSTART.md)** for immediate build instructions.
+
+**Recent Fixes:**
+- ✅ Project structure corrected (proper .xcodeproj bundle)
+- ✅ iOS deployment target fixed (iOS 14.0, was incorrectly iOS 26.0)
+- ✅ Assets catalog added (AppIcon, AccentColor)
+- ✅ Build script enhanced to create IPA files
+- ✅ All configuration issues resolved
+
+**Quick Build:** Run `./build.sh` on macOS with Xcode to create the IPA.
 
 ## Features
 
-- **iOS 26 Compatible**: Updated deployment target and API usage for iOS 26
+- **iOS 14+ Compatible**: Updated deployment target and API usage for iOS 14 and later
 - **Crash-Free Address Bar**: Comprehensive crash prevention and memory management
 - **Chromium-Based Engine**: Uses WKWebView configured for Chromium-like behavior
 - **Robust URL Handling**: Smart URL validation and search query detection
@@ -50,11 +63,11 @@ A Chromium-based web browser for iOS with iOS 26 compatibility and robust addres
 - Network error presentation with user-friendly messages
 - Graceful degradation when components fail to initialize
 
-## iOS 26 Compatibility
+## iOS 14+ Compatibility
 
-- **Deployment Target**: Set to iOS 26.0
+- **Deployment Target**: Set to iOS 14.0
 - **Modern API Usage**: Updated to use latest iOS APIs where available
-- **WebKit Configuration**: Configured for iOS 26 WebKit features
+- **WebKit Configuration**: Configured for modern iOS WebKit features
 - **Scene Support**: Full support for iOS 13+ scene-based lifecycle
 
 ## Testing
@@ -70,14 +83,32 @@ The project includes comprehensive unit tests for the address bar functionality:
 ## Build Requirements
 
 - Xcode 15.0 or later
-- iOS 26.0 SDK
-- Deployment target: iOS 26.0
+- iOS 14.0 SDK or later
+- Deployment target: iOS 14.0
 
 ## Installation
 
+### Quick Start
+For a quick guide to building and installing the IPA, see **[QUICKSTART.md](QUICKSTART.md)**.
+
+### Detailed Steps
 1. Open `ChromiumIOSv2.xcodeproj` in Xcode
-2. Select your target device or simulator (iOS 26+)
-3. Build and run the project
+2. Select your target device or simulator (iOS 14+)
+3. Configure code signing in "Signing & Capabilities"
+4. Build and run the project
+
+### Building IPA
+```bash
+./build.sh
+```
+
+For comprehensive build and installation instructions, see **[BUILD_IPA.md](BUILD_IPA.md)**.
+
+### Validation
+To verify the project is correctly configured:
+```bash
+./validate.sh
+```
 
 ## Usage
 
@@ -116,6 +147,14 @@ When contributing to this project, please ensure:
 2. UI updates are performed on the main thread
 3. Error handling is comprehensive
 4. Unit tests are provided for new functionality
+5. Run `./validate.sh` before submitting changes
+
+## Documentation
+
+- **[QUICKSTART.md](QUICKSTART.md)** - Fast guide to build and install
+- **[BUILD_IPA.md](BUILD_IPA.md)** - Comprehensive build instructions
+- **[FIXES_APPLIED.md](FIXES_APPLIED.md)** - List of fixes and improvements
+- **[CRASH_FIXES.md](CRASH_FIXES.md)** - Technical crash prevention details
 
 ## License
 

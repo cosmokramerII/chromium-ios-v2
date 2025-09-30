@@ -2,7 +2,7 @@
 //  BrowserViewController.m
 //  ChromiumIOSv2
 //
-//  Main browser view controller with Chromium integration and iOS 26 compatibility
+//  Main browser view controller with Chromium integration and iOS 14+ compatibility
 //
 
 #import "BrowserViewController.h"
@@ -39,19 +39,19 @@
 }
 
 - (void)setupWebViewConfiguration {
-    // Configure WebView for iOS 26 compatibility and Chromium-like behavior
+    // Configure WebView for iOS 14+ compatibility and Chromium-like behavior
     self.webViewConfiguration = [[WKWebViewConfiguration alloc] init];
     
     // Enable JavaScript (required for modern web)
     self.webViewConfiguration.preferences.javaScriptEnabled = YES;
     
-    // iOS 26 compatible settings
+    // iOS 14+ compatible settings
     if (@available(iOS 14.0, *)) {
         self.webViewConfiguration.defaultWebpagePreferences.allowsContentJavaScript = YES;
     }
     
     // Configure user agent to identify as Chromium-based browser
-    self.webViewConfiguration.applicationNameForUserAgent = @"ChromiumIOSv2/2.0 (iPhone; iOS 26.0) Chrome/91.0.4472.114 Mobile Safari/537.36";
+    self.webViewConfiguration.applicationNameForUserAgent = @"ChromiumIOSv2/2.0 (iPhone; iOS 14.0) Chrome/91.0.4472.114 Mobile Safari/537.36";
     
     // Enable media playback
     self.webViewConfiguration.allowsInlineMediaPlayback = YES;

@@ -12,7 +12,7 @@
 #define CHROMIUM_VERSION @"91.0.4472.114"
 #define CHROMIUM_USER_AGENT_SUFFIX @"Chrome/91.0.4472.114 Mobile Safari/537.36"
 
-// Feature flags for iOS 26 compatibility
+// Feature flags for iOS 14+ compatibility
 #define ENABLE_MODERN_WEBKIT_FEATURES 1
 #define ENABLE_JAVASCRIPT_JIT 1
 #define ENABLE_HARDWARE_ACCELERATION 1

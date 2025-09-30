@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  ChromiumIOSv2
 //
-//  iOS 26 compatible Chromium-based browser
+//  iOS 14+ compatible Chromium-based browser
 //
 
 #import "AppDelegate.h"
@@ -14,7 +14,7 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // iOS 26 compatibility initialization
+    // iOS 14+ compatibility initialization
     // Initialize Chromium engine components here
     
     return YES;
