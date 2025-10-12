@@ -1,8 +1,8 @@
-# UI Preview - Chromium iOS v2
+# UI Preview - ChromiumIOSv2
 
 ## Interface Layout
 
-The Chromium iOS v2 browser features a clean, modern interface optimized for iOS 26:
+The ChromiumIOSv2 browser features a clean, modern interface optimized for iOS 14+:
 
 ### Address Bar Layout
 ```
@@ -21,7 +21,7 @@ The Chromium iOS v2 browser features a clean, modern interface optimized for iOS
 ### Full Browser Interface
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│ Status Bar (iOS 26)                                         │
+│ Status Bar (iOS 14+)                                        │
 ├─────────────────────────────────────────────────────────────┤
 │ [◀] [▶] [↻]  [      https://www.google.com     ] [Go]      │
 ├─────────────────────────────────────────────────────────────┤
@@ -49,7 +49,7 @@ The Chromium iOS v2 browser features a clean, modern interface optimized for iOS
 - Supports both portrait and landscape orientations
 - Safe area layout guides for notched devices
 
-### 2. Modern iOS 26 Styling
+### 2. Modern iOS 14+ Styling
 - System colors that adapt to light/dark mode
 - SF Symbols for navigation buttons (when available)
 - Native iOS form controls and animations

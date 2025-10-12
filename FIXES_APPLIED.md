@@ -115,8 +115,9 @@ To build and install the IPA:
 ### WebKit Features
 - JavaScript enabled
 - Inline media playback
-- Chromium-like user agent
+- Chrome-compatible user agent for site compatibility
 - Modern security settings
+- Note: Uses Apple's WebKit engine (required for all iOS browsers)
 
 ## Files Changed
 

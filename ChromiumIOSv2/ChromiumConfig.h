@@ -2,15 +2,17 @@
 //  ChromiumConfig.h
 //  ChromiumIOSv2
 //
-//  Chromium-specific configuration constants
+//  WebKit configuration constants (iOS browsers must use WebKit)
 //
 
 #ifndef ChromiumConfig_h
 #define ChromiumConfig_h
 
-// Chromium version info
-#define CHROMIUM_VERSION @"91.0.4472.114"
-#define CHROMIUM_USER_AGENT_SUFFIX @"Chrome/91.0.4472.114 Mobile Safari/537.36"
+// Browser version info
+#define BROWSER_VERSION @"2.0"
+// Chrome user agent version for site compatibility (actual engine is WebKit)
+#define CHROME_VERSION @"91.0.4472.114"
+#define CHROME_USER_AGENT_SUFFIX @"Chrome/91.0.4472.114 Mobile Safari/537.36"
 
 // Feature flags for iOS 14+ compatibility
 #define ENABLE_MODERN_WEBKIT_FEATURES 1

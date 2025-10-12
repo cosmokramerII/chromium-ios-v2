@@ -2,7 +2,7 @@
 //  AppDelegate.h
 //  ChromiumIOSv2
 //
-//  iOS 14+ compatible Chromium-based browser
+//  iOS 14+ compatible WebKit-based browser (Apple's required engine)
 //
 
 #import <UIKit/UIKit.h>
