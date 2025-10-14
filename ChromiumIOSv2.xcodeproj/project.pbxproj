@@ -19,6 +19,7 @@
 		049508E0E7A44E5BAB76FC75 /* BlinkEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 681EE1928FC24D1FBA2748E9 /* BlinkEngine.m */; };
 		A9DD632957024238A70F7EE9 /* BlinkWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = F683C6EC6B8D4CF181BA324A /* BlinkWebView.m */; };
 		02EAE2B379EF460684E82810 /* BlinkContentClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 642B4483F61342558ECAA675 /* BlinkContentClient.m */; };
+		8334CD52EFC54A0CAFA66150 /* BlinkBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B0E1B5CF8A4FB49AF5B15C /* BlinkBrowserViewController.m */; };
 		1475AB83F85F4361B16AB28B /* BlinkBrowserViewController_WebKit_Deprecated.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D79E96043F94D90B694F785 /* BlinkBrowserViewController_WebKit_Deprecated.m */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,8 @@
 		F683C6EC6B8D4CF181BA324A /* BlinkWebView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlinkWebView.m; sourceTree = "<group>"; };
 		2343A2E3FE524D048F3606A6 /* BlinkContentClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlinkContentClient.h; sourceTree = "<group>"; };
 		642B4483F61342558ECAA675 /* BlinkContentClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlinkContentClient.m; sourceTree = "<group>"; };
+		6CADB6D369224613B73FA796 /* BlinkBrowserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlinkBrowserViewController.h; sourceTree = "<group>"; };
+		B6B0E1B5CF8A4FB49AF5B15C /* BlinkBrowserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlinkBrowserViewController.m; sourceTree = "<group>"; };
 		B202B48E812C460C899812C8 /* BlinkBrowserViewController_WebKit_Deprecated.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlinkBrowserViewController_WebKit_Deprecated.h; sourceTree = "<group>"; };
 		9D79E96043F94D90B694F785 /* BlinkBrowserViewController_WebKit_Deprecated.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlinkBrowserViewController_WebKit_Deprecated.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
