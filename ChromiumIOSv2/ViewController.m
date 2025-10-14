@@ -2,7 +2,8 @@
 //  ViewController.m
 //  ChromiumIOSv2
 //
-//  Main view controller for iOS 14+ compatible Chromium browser
+//  Main view controller for iOS 14+ compatible Chromium browser with Blink rendering engine
+//  NOTE: This is a conceptual implementation. iOS does not support alternative browser engines.
 //
 
 #import "ViewController.h"
@@ -16,8 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Initialize browser view controller
-    self.browserViewController = [[BrowserViewController alloc] init];
+    // Initialize Blink browser view controller
+    self.browserViewController = [[BlinkBrowserViewController alloc] init];
     
     // Add as child view controller
     [self addChildViewController:self.browserViewController];

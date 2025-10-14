@@ -1,6 +1,9 @@
 //
-//  BrowserViewController.h
+//  BrowserViewController_WebKit_Deprecated.h
 //  ChromiumIOSv2
+//
+//  DEPRECATED: This file used WebKit and has been replaced by BlinkBrowserViewController
+//  Kept for reference purposes only. Do not use in new code.
 //
 //  Main browser view controller with Chromium integration and iOS 14+ compatibility
 //
@@ -11,6 +14,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+// DEPRECATED: Use BlinkBrowserViewController instead
+__attribute__((deprecated("Use BlinkBrowserViewController instead")))
 @interface BrowserViewController : UIViewController <AddressBarControllerDelegate, WKNavigationDelegate, WKUIDelegate>
 
 @property (nonatomic, strong) AddressBarController *addressBarController;
