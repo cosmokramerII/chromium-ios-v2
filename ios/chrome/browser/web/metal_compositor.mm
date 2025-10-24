@@ -40,35 +40,49 @@ bool MetalCompositor::Initialize(CAMetalLayer* layer) {
     return false;
   }
 
+  if (initialized_) {
+    LOG(WARNING) << "Metal compositor already initialized";
+    return true;
+  }
+
   metal_layer_ = layer;
 
   // Create Metal device
-  id<MTLDevice> device = MTLCreateSystemDefaultDevice();
-  if (!device) {
-    LOG(ERROR) << "Failed to create Metal device";
-    return false;
+  @autoreleasepool {
+    id<MTLDevice> device = MTLCreateSystemDefaultDevice();
+    if (!device) {
+      LOG(ERROR) << "Failed to create Metal device - Metal may not be supported";
+      return false;
+    }
+
+    metal_device_ = (__bridge_retained void*)device;
+
+    // Create command queue
+    id<MTLCommandQueue> queue = [device newCommandQueue];
+    if (!queue) {
+      LOG(ERROR) << "Failed to create Metal command queue";
+      if (metal_device_) {
+        CFRelease(metal_device_);
+        metal_device_ = nullptr;
+      }
+      return false;
+    }
+
+    command_queue_ = (__bridge_retained void*)queue;
+
+    // Configure the Metal layer
+    layer.device = device;
+    layer.framebufferOnly = YES;
+    layer.presentsWithTransaction = NO;
+    
+    // Set a reasonable drawable size if not already set
+    if (CGSizeEqualToSize(layer.drawableSize, CGSizeZero)) {
+      layer.drawableSize = layer.bounds.size;
+    }
+
+    initialized_ = true;
+    LOG(INFO) << "Metal compositor initialized successfully";
   }
-
-  metal_device_ = (__bridge_retained void*)device;
-
-  // Create command queue
-  id<MTLCommandQueue> queue = [device newCommandQueue];
-  if (!queue) {
-    LOG(ERROR) << "Failed to create Metal command queue";
-    CFRelease(metal_device_);
-    metal_device_ = nullptr;
-    return false;
-  }
-
-  command_queue_ = (__bridge_retained void*)queue;
-
-  // Configure the Metal layer
-  layer.device = device;
-  layer.framebufferOnly = YES;
-  layer.presentsWithTransaction = NO;
-
-  initialized_ = true;
-  LOG(INFO) << "Metal compositor initialized successfully";
 
   return true;
 }
@@ -120,13 +134,21 @@ void MetalCompositor::SubmitFrame() {
 
 void MetalCompositor::Resize(int width, int height) {
   if (!initialized_) {
+    LOG(WARNING) << "Cannot resize - compositor not initialized";
+    return;
+  }
+
+  if (width <= 0 || height <= 0) {
+    LOG(WARNING) << "Invalid resize dimensions: " << width << "x" << height;
     return;
   }
 
   LOG(INFO) << "Resizing Metal compositor to " << width << "x" << height;
   
   // Update the drawable size
-  metal_layer_.drawableSize = CGSizeMake(width, height);
+  @autoreleasepool {
+    metal_layer_.drawableSize = CGSizeMake(width, height);
+  }
 }
 
 void* MetalCompositor::GetMetalDevice() {

@@ -57,18 +57,33 @@
   _blinkBridge = std::make_unique<ios::chrome::BlinkWebViewBridge>();
   
   CGSize viewSize = self.view.bounds.size;
+  if (viewSize.width <= 0 || viewSize.height <= 0) {
+    LOG(ERROR) << "Invalid view size for initialization";
+    _statusLabel.text = @"Error: Invalid view size";
+    return;
+  }
+  
   gfx::Size size(static_cast<int>(viewSize.width), 
                  static_cast<int>(viewSize.height));
   
-  if (_blinkBridge->Initialize(size)) {
-    LOG(INFO) << "Blink WebView initialized successfully";
-  } else {
+  if (!_blinkBridge->Initialize(size)) {
     LOG(ERROR) << "Failed to initialize Blink WebView";
+    _statusLabel.text = @"Error: Blink initialization failed";
+    return;
   }
+  
+  LOG(INFO) << "Blink WebView initialized successfully";
   
   // Initialize compositor
   _compositor = std::make_unique<ios::chrome::MetalCompositor>();
-  _compositor->Initialize(_metalLayer);
+  if (!_compositor->Initialize(_metalLayer)) {
+    LOG(ERROR) << "Failed to initialize Metal compositor";
+    _statusLabel.text = @"Error: Metal initialization failed";
+    return;
+  }
+  
+  LOG(INFO) << "Metal compositor initialized successfully";
+  _statusLabel.text = @"Ready: Blink WebView + Metal Compositor";
 }
 
 - (void)viewDidLayoutSubviews {
@@ -85,10 +100,18 @@
 }
 
 - (void)loadURL:(NSString *)urlString {
+  if (!urlString || urlString.length == 0) {
+    LOG(WARNING) << "Attempted to load nil or empty URL";
+    return;
+  }
+  
   if (_blinkBridge) {
     std::string url = [urlString UTF8String];
     _blinkBridge->LoadURL(url);
     _statusLabel.text = [NSString stringWithFormat:@"Loading: %@", urlString];
+  } else {
+    LOG(ERROR) << "Cannot load URL - Blink bridge not initialized";
+    _statusLabel.text = @"Error: Blink not initialized";
   }
 }
 
