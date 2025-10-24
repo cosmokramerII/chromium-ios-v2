@@ -114,3 +114,13 @@ src/
 
 # Build outputs
 chromium-blink.ipa
+
+# Validation and test outputs
+*.log
+validation-*.txt
+
+# Temporary build files
+*.o
+*.a
+*.so
+*.dylib

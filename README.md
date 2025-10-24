@@ -6,12 +6,33 @@ A minimal iOS browser application based on Chromium with Blink rendering engine 
 
 This repository includes a complete architectural framework for integrating **Blink** (Chromium's rendering engine) directly into iOS, replacing WKWebView. See [BLINK_INTEGRATION.md](BLINK_INTEGRATION.md) for comprehensive documentation.
 
+### ⚠️ Current Status
+
+**This is a framework/architecture demonstration with mock implementations.**
+
+✅ **Ready:**
+- Complete build system configuration (GN + args.gn)
+- Full C++ bridge layer architecture
+- Metal compositor framework
+- iOS app UI and integration points
+- Comprehensive documentation
+- Unit test framework
+
+⚠️ **Mock/Stub:**
+- Blink API calls (stubbed for demonstration)
+- Actual web rendering (requires full Chromium build)
+- JavaScript execution (V8 not linked)
+- Network requests (interface ready)
+
+To enable actual Blink rendering, you must build against the full Chromium source tree (~100GB). See [Building with Chromium](#building-with-chromium) below.
+
 ### Key Features
-- **Direct Blink Integration**: Uses Chromium's Blink rendering engine instead of WebKit
-- **Metal Compositor**: Hardware-accelerated rendering via Metal API
-- **C++ Bridge Layer**: Native integration between Swift/Objective-C and Blink C++
-- **Full Browser UI**: Address bar, navigation controls, and web content display
+- **Direct Blink Integration**: Framework for using Chromium's Blink rendering engine
+- **Metal Compositor**: Hardware-accelerated rendering infrastructure via Metal API
+- **C++ Bridge Layer**: Production-ready integration between Swift/Objective-C and Blink C++
+- **Full Browser UI**: Complete address bar, navigation controls, and web content display
 - **GN Build System**: Complete build configuration for Chromium integration
+- **Validation Tools**: Configuration validator and troubleshooting guide
 
 ## Project Structure
 

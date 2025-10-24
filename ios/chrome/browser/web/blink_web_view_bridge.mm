@@ -9,6 +9,15 @@
 
 // Mock/Stub implementations - In a real build, these would link to actual Blink
 // For demonstration purposes, these show the integration points
+//
+// IMPORTANT: This is a framework/architecture demonstration.
+// To use actual Blink rendering:
+// 1. Build the full Chromium source tree with iOS target
+// 2. Link against //third_party/blink/public/web
+// 3. Replace mock implementations with real Blink API calls
+// 4. Initialize blink::Platform in InitializeBlinkPlatform()
+//
+// The interface is production-ready; only the implementation is stubbed.
 
 namespace ios {
 namespace chrome {
@@ -40,6 +49,13 @@ void BlinkWebViewBridge::InitializeBlinkPlatform() {
 }
 
 bool BlinkWebViewBridge::Initialize(const gfx::Size& size) {
+  // Validate input parameters
+  if (size.width() <= 0 || size.height() <= 0) {
+    LOG(ERROR) << "Invalid size for WebView initialization: "
+               << size.width() << "x" << size.height();
+    return false;
+  }
+
   InitializeBlinkPlatform();
 
   LOG(INFO) << "Initializing Blink WebView with size: " 
@@ -50,23 +66,50 @@ bool BlinkWebViewBridge::Initialize(const gfx::Size& size) {
   // 2. Set up WebViewClient for callbacks
   // 3. Configure viewport settings
   // 4. Initialize compositor layer tree
+  //
+  // Example real implementation:
+  // web_view_client_ = std::make_unique<BlinkWebViewClientImpl>();
+  // web_view_ = blink::WebView::Create(web_view_client_.get(),
+  //                                     /* is_hidden */ false,
+  //                                     /* compositing_enabled */ true,
+  //                                     /* opener */ nullptr,
+  //                                     /* agent_group_scheduler */ nullptr);
+  // web_view_->SetSize(gfx::Size(size.width(), size.height()));
   
   return true;
 }
 
 void BlinkWebViewBridge::LoadURL(const std::string& url) {
+  if (url.empty()) {
+    LOG(WARNING) << "Attempted to load empty URL";
+    return;
+  }
+
   LOG(INFO) << "Loading URL: " << url;
   
   // In a real implementation:
-  // web_view_->MainFrame()->LoadRequest(WebURLRequest(GURL(url)));
+  // GURL gurl(url);
+  // if (!gurl.is_valid()) {
+  //   LOG(ERROR) << "Invalid URL: " << url;
+  //   return;
+  // }
+  // blink::WebURLRequest request(gurl);
+  // web_view_->MainFrame()->LoadRequest(request);
 }
 
 void BlinkWebViewBridge::Resize(const gfx::Size& new_size) {
+  if (new_size.width() <= 0 || new_size.height() <= 0) {
+    LOG(WARNING) << "Invalid resize dimensions: " 
+                 << new_size.width() << "x" << new_size.height();
+    return;
+  }
+
   LOG(INFO) << "Resizing to: " << new_size.width() << "x" << new_size.height();
   
   // In a real implementation:
   // web_view_->Resize(new_size);
-  // web_view_->UpdateAllLifecyclePhases();
+  // web_view_->UpdateAllLifecyclePhases(
+  //     blink::DocumentUpdateReason::kSizeChange);
 }
 
 void BlinkWebViewBridge::HandleInputEvent(const blink::WebInputEvent& event) {
