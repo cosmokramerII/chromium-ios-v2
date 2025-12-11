@@ -1,11 +1,14 @@
 //
-//  BrowserViewController.m
+//  BrowserViewController_WebKit_Deprecated.m
 //  ChromiumIOSv2
+//
+//  DEPRECATED: This file used WebKit and has been replaced by BlinkBrowserViewController
+//  Kept for reference purposes only. Do not use in new code.
 //
 //  Main browser view controller with Chromium integration and iOS 14+ compatibility
 //
 
-#import "BrowserViewController.h"
+#import "BrowserViewController_WebKit_Deprecated.h"
 
 @interface BrowserViewController ()
 

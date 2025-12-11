@@ -1,8 +1,10 @@
-# UI Preview - Chromium iOS v2
+# UI Preview - Chromium iOS v2 (Blink Edition)
+
+**Note:** This is a conceptual implementation. The UI will display placeholder content since iOS does not support Blink rendering.
 
 ## Interface Layout
 
-The Chromium iOS v2 browser features a clean, modern interface optimized for iOS 26:
+The Chromium iOS v2 browser features a clean, modern interface with Blink rendering engine architecture:
 
 ### Address Bar Layout
 ```

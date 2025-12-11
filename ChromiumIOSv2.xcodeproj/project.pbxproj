@@ -10,12 +10,17 @@
 		1A2B3C4D5E6F789012345678 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F789012345679 /* AppDelegate.m */; };
 		1A2B3C4D5E6F789012345680 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F789012345681 /* SceneDelegate.m */; };
 		1A2B3C4D5E6F789012345682 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F789012345683 /* ViewController.m */; };
-		1A2B3C4D5E6F789012345684 /* BrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F789012345685 /* BrowserViewController.m */; };
+		1A2B3C4D5E6F789012345684 /* BrowserViewController_WebKit_Deprecated.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F789012345685 /* BrowserViewController_WebKit_Deprecated.m */; };
 		1A2B3C4D5E6F789012345686 /* AddressBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F789012345687 /* AddressBarController.m */; };
 		1A2B3C4D5E6F789012345688 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F789012345689 /* main.m */; };
 		1A2B3C4D5E6F789012345690 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F789012345691 /* LaunchScreen.storyboard */; };
 		1A2B3C4D5E6F789012345692 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F789012345693 /* Main.storyboard */; };
 		1A2B3C4D5E6F789012345702 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F789012345703 /* Assets.xcassets */; };
+		049508E0E7A44E5BAB76FC75 /* BlinkEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 681EE1928FC24D1FBA2748E9 /* BlinkEngine.m */; };
+		A9DD632957024238A70F7EE9 /* BlinkWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = F683C6EC6B8D4CF181BA324A /* BlinkWebView.m */; };
+		02EAE2B379EF460684E82810 /* BlinkContentClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 642B4483F61342558ECAA675 /* BlinkContentClient.m */; };
+		8334CD52EFC54A0CAFA66150 /* BlinkBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B0E1B5CF8A4FB49AF5B15C /* BlinkBrowserViewController.m */; };
+		1475AB83F85F4361B16AB28B /* BlinkBrowserViewController_WebKit_Deprecated.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D79E96043F94D90B694F785 /* BlinkBrowserViewController_WebKit_Deprecated.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +31,8 @@
 		1A2B3C4D5E6F789012345681 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		1A2B3C4D5E6F789012345682 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		1A2B3C4D5E6F789012345683 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		1A2B3C4D5E6F789012345684 /* BrowserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrowserViewController.h; sourceTree = "<group>"; };
-		1A2B3C4D5E6F789012345685 /* BrowserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrowserViewController.m; sourceTree = "<group>"; };
+		1A2B3C4D5E6F789012345684 /* BrowserViewController_WebKit_Deprecated.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrowserViewController_WebKit_Deprecated.h; sourceTree = "<group>"; };
+		1A2B3C4D5E6F789012345685 /* BrowserViewController_WebKit_Deprecated.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrowserViewController_WebKit_Deprecated.m; sourceTree = "<group>"; };
 		1A2B3C4D5E6F789012345686 /* AddressBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressBarController.h; sourceTree = "<group>"; };
 		1A2B3C4D5E6F789012345687 /* AddressBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressBarController.m; sourceTree = "<group>"; };
 		1A2B3C4D5E6F789012345689 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -36,6 +41,16 @@
 		1A2B3C4D5E6F789012345695 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A2B3C4D5E6F789012345701 /* ChromiumConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChromiumConfig.h; sourceTree = "<group>"; };
 		1A2B3C4D5E6F789012345703 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		68C5952FEDE6487EB08E24AE /* BlinkEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlinkEngine.h; sourceTree = "<group>"; };
+		681EE1928FC24D1FBA2748E9 /* BlinkEngine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlinkEngine.m; sourceTree = "<group>"; };
+		9A1CFE666B06477AA7437755 /* BlinkWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlinkWebView.h; sourceTree = "<group>"; };
+		F683C6EC6B8D4CF181BA324A /* BlinkWebView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlinkWebView.m; sourceTree = "<group>"; };
+		2343A2E3FE524D048F3606A6 /* BlinkContentClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlinkContentClient.h; sourceTree = "<group>"; };
+		642B4483F61342558ECAA675 /* BlinkContentClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlinkContentClient.m; sourceTree = "<group>"; };
+		6CADB6D369224613B73FA796 /* BlinkBrowserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlinkBrowserViewController.h; sourceTree = "<group>"; };
+		B6B0E1B5CF8A4FB49AF5B15C /* BlinkBrowserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlinkBrowserViewController.m; sourceTree = "<group>"; };
+		B202B48E812C460C899812C8 /* BlinkBrowserViewController_WebKit_Deprecated.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlinkBrowserViewController_WebKit_Deprecated.h; sourceTree = "<group>"; };
+		9D79E96043F94D90B694F785 /* BlinkBrowserViewController_WebKit_Deprecated.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlinkBrowserViewController_WebKit_Deprecated.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,8 +89,8 @@
 				1A2B3C4D5E6F789012345681 /* SceneDelegate.m */,
 				1A2B3C4D5E6F789012345682 /* ViewController.h */,
 				1A2B3C4D5E6F789012345683 /* ViewController.m */,
-				1A2B3C4D5E6F789012345684 /* BrowserViewController.h */,
-				1A2B3C4D5E6F789012345685 /* BrowserViewController.m */,
+				1A2B3C4D5E6F789012345684 /* BrowserViewController_WebKit_Deprecated.h */,
+				1A2B3C4D5E6F789012345685 /* BrowserViewController_WebKit_Deprecated.m */,
 				1A2B3C4D5E6F789012345686 /* AddressBarController.h */,
 				1A2B3C4D5E6F789012345687 /* AddressBarController.m */,
 				1A2B3C4D5E6F789012345701 /* ChromiumConfig.h */,
@@ -159,7 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A2B3C4D5E6F789012345682 /* ViewController.m in Sources */,
-				1A2B3C4D5E6F789012345684 /* BrowserViewController.m in Sources */,
+				1A2B3C4D5E6F789012345684 /* BrowserViewController_WebKit_Deprecated.m in Sources */,
 				1A2B3C4D5E6F789012345686 /* AddressBarController.m in Sources */,
 				1A2B3C4D5E6F789012345688 /* main.m in Sources */,
 				1A2B3C4D5E6F789012345678 /* AppDelegate.m in Sources */,
